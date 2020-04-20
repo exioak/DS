@@ -1,12 +1,11 @@
 
-/* C program to check if a tree is height-balanced or not */
+
 #include <stdio.h> 
 #include <stdlib.h> 
 #define bool int 
   
 int x;  
-/* A binary tree node has data, pointer to left child 
-   and a pointer to right child */
+
 struct node { 
     int data; 
     struct node* left; 
@@ -16,7 +15,7 @@ struct node {
 /* Returns the height of a binary tree */
 int height(struct node* node); 
   
-/* Returns true if binary tree with root as root is height-balanced */
+
 bool isBalanced(struct node* root) 
 { 
     int lh; /* for height of left subtree */
@@ -35,11 +34,11 @@ bool isBalanced(struct node* root)
     if (abs(lh - rh) <= 1 && isBalanced(root->left) && isBalanced(root->right)) 
         return 1; 
   
-    /* If we reach here then tree is not height-balanced */
+    
     return 0; 
 } 
   
-/* UTILITY FUNCTIONS TO TEST isBalanced() FUNCTION */
+
   
 /* returns maximum of two integers */
 int max(int a, int b) 
@@ -47,12 +46,9 @@ int max(int a, int b)
     return (a >= b) ? a : b; 
 } 
   
-/*  The function Compute the "height" of a tree. Height is the 
-    number of nodes along the longest path from the root node 
-    down to the farthest leaf node.*/
+/*  The function Compute the "height" of a tree.*/
 int height(struct node* node) 
 { 
-    /* base case tree is empty */
     if (node == NULL) 
         return 0; 
   
@@ -60,9 +56,6 @@ int height(struct node* node)
       height and right heights */
     return 1 + max(height(node->left), height(node->right)); 
 } 
-  
-/* Helper function that allocates a new node with the 
-   given data and NULL left and right pointers. */
 struct node* newNode(int data) 
 { 
     struct node* node = (struct node*) 
