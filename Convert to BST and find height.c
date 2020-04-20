@@ -21,8 +21,7 @@ int max(int a, int b)
 } 
 struct Node* newNode(int key) 
 { 
-	struct Node* node = (struct Node*) 
-						malloc(sizeof(struct Node)); 
+	struct Node* node = (struct Node*)malloc(sizeof(struct Node)); 
 	node->key = key; 
 	node->left = NULL; 
 	node->right = NULL; 
@@ -138,8 +137,8 @@ root = insert(root, 50);
 root = insert(root, 25); 
 
 /* The constructed Tree would be 
-		 30 
-		/  \ 
+	     30 
+	    /  \ 
 	   20  40 
 	  / \    \ 
 	 10 25   50 
