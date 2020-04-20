@@ -91,7 +91,7 @@ int main()
 	  printf("\nL,L Rotation");
 	else
 	if(x<=-1)
-	   printf("\nR,R Rtation");   
+	   printf("\nR,R Rotation");   
 	 /*     1
 	      /  \
 	     2    3
